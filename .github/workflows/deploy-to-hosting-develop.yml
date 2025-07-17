@@ -1,4 +1,4 @@
-name: HomePage Deploy to Hosting Develop
+name: Deploy to Hosting Develop
 on:
   push:
     branches:
@@ -27,4 +27,5 @@ jobs:
           channelId: develop
           target: arpeggio393
           projectId: arpeggio393
+
 

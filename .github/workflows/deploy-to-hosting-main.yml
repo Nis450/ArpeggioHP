@@ -1,4 +1,4 @@
-name: HomePage Deploy to Hosting Main
+name: Deploy to Hosting Main
 on:
   push:
     branches:
