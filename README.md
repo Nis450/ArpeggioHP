@@ -2,11 +2,17 @@
 
 ホームページ：https://arpeggio393.web.app/
 
-この手順では、**プログラミング未経験** の人でも、  
-**ArpeggioのリポジトリにIssueを作成し、変更をプッシュしてPRを作成する** までに必要なすべての環境構築・手順を説明します。
+この手順では、**プログラミング初心者** の人でも、  
+**ホームページをアップデートする** までに必要なすべての環境構築・手順を説明します‼️
+
+
+## 必須条件
+- 理工学部の情シス/イン情または文化情報学部 (それ以外でもプログラミングに触れた経験があれば🙆‍♂️)
+- VS CodeまたはCursor、RplitなどのAIコーディングツールを触ったことがある
+- Githubという名前を知っている
 
 ## GitHubアカウントを作る
-- [GitHub公式サイト](https://github.com) にアクセスし、無料アカウントを作成  
+- [GitHub公式サイト](https://github.com) にアクセスし、右上にあるボタンからアカウントを作成  
 
 ## GitHubのPersonal Access Token（トークン）を作成
 - GitHubの `Settings` → `Developer settings` → `Personal access tokens` → `Tokens (classic)` にアクセス  
@@ -19,23 +25,19 @@
 - [Git公式サイト](https://git-scm.com/) からダウンロードしてインストール  
 - ターミナルで以下を実行して、ユーザー情報を設定  
   ```
-  git config --global user.name "nishio-nobishiro"
-  git config --global user.email "nishio@example.com"
+  git config --global user.name "{username}"
+  git config --global user.email "{email}"
   ```
   例）
+  ```
     git config --global user.name "Nis450"
     git config --global user.email "arpeggio@example.com"
+    ```
 - GitHubのリポジトリにアクセスする時に、HTTPS接続を使い、トークンをパスワード代わりに入力  
 
 ## VSCodeのインストール
 - [VSCode公式サイト](https://code.visualstudio.com/) からダウンロードしてインストール  
 
-## リポジトリをクローン
-ターミナルで以下を実行  
-```
-git clone https://github.com/Nis450/ArpeggioHP.git
-cd arpeggio_web
-```
 
 ## Node.js と npm をインストール
 - [Node.js公式サイト](https://nodejs.org/ja/download) からLTS版をダウンロードしてインストール  
@@ -44,6 +46,18 @@ cd arpeggio_web
   node -v
   npm -v
   ```
+
+## リポジトリをクローン
+
+1. まずプロジェクトフォルダーを作る場所に移動する。
+僕の場合は Desktop/VSCode
+
+2. そのフォルダ内でターミナルで以下を実行  
+```
+git clone https://github.com/Nis450/ArpeggioHP.git
+cd arpeggio_web
+```
+
 
 ## 必要なパッケージをインストール
 ```
@@ -58,7 +72,12 @@ npm run dev
 
 ## 作業用ブランチを作成
 ```
-git checkout -b feature/自分の作業名
+git checkout -b feature/{ユーザー名}_{タイトル}
+```
+
+例：
+```
+git checkout -b feature/Nis450_アルバム30th情報追加
 ```
 
 ## 変更を保存してコミット
