@@ -86,6 +86,17 @@ Cursorでの開発方法です。
 ## Cursorのインストール
 - [Cursor公式サイト](https://cursor.so/) からダウンロードしてインストール。課金が求められても不要。
 
+Cursorの便利な拡張機能も入れよう！
+
+左上にある2*2正方形のボタンを押して、検索欄に
+```
+GitHub Pull Requests
+```
+を入力してインストール！
+
+![Cursor](./readme_pictures/cursor_extension_githubPR.png)
+
+
 ## Node.js と npm をインストール
 - [Node.js公式サイト](https://nodejs.org/ja/download) からLTS版をダウンロードしてインストール  
 - インストール完了後、ターミナルで以下のコマンドを実行し、インストールできたか確認  
@@ -195,15 +206,34 @@ Cursorの左上にあるツリーみたいなボタンを押して、作業内�
   5. 下までスクロールし、「Generate token」をクリック  
   6. 表示されたトークンをコピーし、**Cursorで求められたパスワード欄に貼り付ける**
 
-ちなみにコミットプッシュとは、
-```
+ちなみに...
+**コミットプッシュとは？**
+
 自分の作業内容をパソコン上に保存（コミット）し、
 それをGitHubにアップロード（プッシュ）することです。  
 この作業を行うことで、チーム全体が最新の作業内容を共有できるようになります。
-```
 
   
 ## GitHub上でPull Request（PR）を作成
-- GitHubのリポジトリページにアクセス  
-- 「Compare & Pull Request」ボタンからPRを作成  
-- タイトルと説明を記入し、ペジオHP管理者にレビュー依頼 
+
+Pull Request（PR）とは、自分が作業した内容を管理者に確認・反映してもらうための申請のようなものです。  
+何回かコミット＆プッシュした後に、**担当している機能や内容が完全に完成したら**、PRを出してください。
+**開発途中の段階でもコミットプッシュは何回しても大丈夫ですが、PRは開発途中の段階では出さないようお願いします。**
+
+ ### 手順:
+変更内容をペジオHP管理者が確認し、ホームページに反映させます！ 
+
+左上にある下矢印？のボタンを押して、GitHub Pull Requestsを押す
+![Cursor](./readme_pictures/cursor_pr_1.png)
+
+赤丸で示したボタンを押す
+![Cursor](./readme_pictures/cursor_pr_2.png)
+
+BASEが「develop」になっているかを確認！もしなっていなければ、developに書き換える。
+
+そしてMERGEのところは
+**feature/{自分のユーザー名}**
+になっているかを確認！
+
+OKなら、**Createボタン**を押す！
+![Cursor](./readme_pictures/cursor_pr_3.png)
