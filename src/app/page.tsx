@@ -19,7 +19,7 @@ export default function Home() {
         setScrollOpacity(1);
       }
     }
-    aあa;
+    aあa;a
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
