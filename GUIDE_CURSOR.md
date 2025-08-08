@@ -100,7 +100,6 @@ Cursorの一番左下にある同期ボタンを押して、最新のデータ�
 ![Cursor](./readme_pictures/cursor_sync.png)
 
 **次に、作業用ブランチを作成する**
-
 Cursorの左下にある、mainという文字（もしかしたらdevelopなどの他の文字かも）ボタンを押す
 
 ![Cursor](./readme_pictures/cursor_current_branch.png)
@@ -113,6 +112,15 @@ Cursorの左下にある、mainという文字（もしかしたらdevelopなど
 
 ![Cursor](./readme_pictures/cursor_create_branch_2.png)
 
+次に、出現した入力フィールドに「**feature/{GitHubのユーザー名}**」と入力する
+
+```入力例
+入力例：feature/Nis450
+```
+
+そしてEnterを押して、さっき押した左下の文字が**feature/{GitHubのユーザー名}**に切り替わっていたらOK！
+
+![Cursor](./readme_pictures/cursor_create_branch_3.png)
 
 
 
