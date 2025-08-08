@@ -1,6 +1,5 @@
 "use client"; // これを追加
 
-import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import Header from './base/Header';
 import { groups } from './const/group/GroupList';
@@ -26,9 +25,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Arpeggio</title>
-      </Head>
       <Header bgColor="bg-black" textColor="text-white" />
       <div className="bg-black text-white flex flex-col items-center justify-center py-20 min-h-screen tracking-lwidest">
         <h1 className="text-3xl md:text-7xl text-center font-bold animate-fadeInUp delay-100">同志社大学VOCALOID研究会Arpeggio</h1>
@@ -78,6 +74,19 @@ export default function Home() {
             rel="noopener noreferrer"
             className="text-mikuBlue text-2xl  px-6 py-3 rounded-lg border-2 border-transparent hover:border-mikuPink transition-colors">
             fc2ブログ
+          </a>
+        </div>
+      </div>
+
+      <div className="bg-black text-white flex flex-col items-center justify-center py-10 tracking-wider mx-10">
+        <h2 className="text-4xl font-bold">Arpeggioのメンバーを見てみよう！</h2>
+        <p className="text-xl mt-5 mx-10">
+          個性豊かなArpeggioメンバーをご紹介します。DTM班、歌ってみた班、イラスト班など、様々な班で活動するメンバーがいます！
+        </p>
+        <div className="flex space-x-4 mt-10">
+          <a href="/members"
+            className="bg-mikuBlue text-white font-semibold text-2xl px-8 py-4 rounded-lg transition-colors hover:scale-105">
+            メンバー一覧を見る
           </a>
         </div>
       </div>

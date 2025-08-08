@@ -2,41 +2,38 @@
 # Cursorでの開発手順
 
 ## Gitのインストールとセットアップ
+
 - [Git公式サイト](https://git-scm.com/) からダウンロードしてインストール  
 - インストール完了後、ターミナルで以下のコマンドを実行して、ユーザー情報を設定  
-  ```
+
+  ```コマンド
   git config --global user.name "{Githubのユーザー名}"
   git config --global user.email "{Githubのメアド}"
   ```
+
   例）
-  ```
+
+  ```コマンド
     git config --global user.name "Nis450"
     git config --global user.email "arpeggio@example.com"
     ```
 
 ## Cursorのインストール
+
 - [Cursor公式サイト](https://cursor.so/) からダウンロードしてインストール。**課金が求められても不要。**
 
-Cursorの便利な拡張機能も入れよう！
-
-左上にある正方形のボタンを押して、検索欄に
-```
-GitHub Pull Requests
-```
-を入力してインストール！
-
-![Cursor](./readme_pictures/cursor_extension_githubPR.png)
-
-
 ## Node.js と npm をインストール
-- [Node.js公式サイト](https://nodejs.org/ja/download) からLTS版をダウンロードしてインストール  
-- インストール完了後、ターミナルで以下のコマンドを実行し、インストールできたか確認  
-  ```
-  node -v
-  npm -v
-  ```
 
-  ![ターミナル](./readme_pictures/node_and_npm_v.png)
+- [Node.js公式サイト](https://nodejs.org/ja/download) からLTS版をダウンロードしてインストール  
+- インストールが完了したらパソコンを再起動
+- インストール完了後、ターミナルを開いて以下のコマンドを実行し、インストールできたか確認  
+
+```コマンド
+node -v
+npm -v
+```
+
+![ターミナル](./readme_pictures/node_and_npm_v.png)
 
 もしバージョンが表示されない場合、連絡ください
 
@@ -47,11 +44,12 @@ GitHub Pull Requests
 
 ![Cursor](./readme_pictures/cursor_top.png)
 
-
 上らへんにあるURL欄に
-```
+
+```HPのリンク
 https://github.com/Nis450/ArpeggioHP.git 
 ```
+
 をペーストしてEnter。
 
 ![Cursor](./readme_pictures/cursor_url_input.png)
@@ -67,13 +65,11 @@ https://github.com/Nis450/ArpeggioHP.git
 ここから先のコマンドは**ペジオHPフォルダを開いているCursor上のターミナル**で実行してください。
 左上にターミナルというボタンがあるはず？
 
-
-
-
 ## 必要なパッケージをインストール
 
 下記のコマンドを実行。
-```
+
+```コマンド
 npm install
 ```
 
@@ -82,7 +78,8 @@ npm install
 ## ブラウザでプレビューする
 
 さっきの続きのターミナルで以下のコマンドを実行。
-```
+
+```コマンド
 npm run dev
 ```
 
@@ -92,24 +89,26 @@ npm run dev
 
 ![Preview](./readme_pictures/run_hp.png)
 
-### ちゃんとペジオHPが表示されたらOKです！！！
-### とりあえずお疲れ様でした！！
+**ちゃんとペジオHPが表示されたらOKです！！！**
 
 ---
-## Cursorでの開発フェーズ詳細
 
-## 作業用ブランチを作成
-```
+## Cursorで実際に開発を進めていこう‼️
+
+**ブランチを作成**
+
+```コマンド
 git checkout -b feature/{ユーザー名}
 ```
 
 例：
-```
+
+```コマンド
 git checkout -b feature/Nis450
 ```
 
-## 開発‼️
-自分が担当している部分のコードをカタカタして開発する。
+これで開発の準備は完了！！！！
+**あとは、自分が担当している部分をカタカタ開発しよう！！！！！**
 
 ## 開発がひと段落ついたら
 
@@ -121,10 +120,12 @@ Cursorの左上にあるツリーみたいなボタンを押して、作業内�
 このコミット&プッシュは何回行っても構いません。
 
 例えばアルバム情報追加の場合・・
-```
+
+```コマンド
 トラック1の情報を全て追加してとりあえずコミット&プッシュ
 トラック2の情報も全て追加してコミット&プッシュ
 ```
+
 という感じでも問題ありません。
 
 - この際、**初回はパスワードが求められる**ことがあります。その際、**パスワード欄にはPersonal Access Tokenを入力**してください  
@@ -132,7 +133,7 @@ Cursorの左上にあるツリーみたいなボタンを押して、作業内�
   ### Personal Access Tokenの作成手順
 
   1. 以下のURLにアクセス  
-     https://github.com/settings/tokens
+     <https://github.com/settings/tokens>
   2. 右上にある「Generate new token (classic)」をクリック  
   3. トークンの名前（例：Arpeggio開発用）と有効期限を設定  
   4. 「repo」にチェックを入れる  
@@ -146,38 +147,45 @@ Cursorの左上にあるツリーみたいなボタンを押して、作業内�
 それをGitHubにアップロード（プッシュ）することです。  
 この作業を行うことで、チーム全体が最新の作業内容を共有できるようになります。
 
-  
 ## Pull Request（PR）を作成
 
-Pull Request（PR）とは、自分が作業した内容を管理者に確認・反映してもらうための申請のようなものです。  
-何回かコミット＆プッシュした後に、**担当している機能や内容が完全に完成したら**、PRを出してください。
-**コミット&プッシュは開発途中の段階でも何回しても大丈夫ですが、PRは開発が完全に完了してから出してください**
+Pull Request（PR）とは、各々が開発した内容を管理者（にっしー）に確認・サーバーに反映してもらうための申請のようなものです。  
+何回かstage & commit & pushした後に、**担当している機能や内容が完全に完成したら**、PRを出してください。
+**開発途中の段階でもstage & commit & pushは何回しても大丈夫ですが、PRは開発途中の段階では出さないようお願いします。**
 
- ### 手順:
+### 実際にPRを出してみよう
 
-左上にある下矢印？のボタンを押して、GitHub Pull Requestsを押す
-![Cursor](./readme_pictures/cursor_pr_1.png)
+PRを出すためにペジオHPのGitHubにアクセスしてください。
 
-赤丸で示したボタンを押す
-![Cursor](./readme_pictures/cursor_pr_2.png)
+<https://github.com/Nis450/ArpeggioHP/pulls/>
 
-BASEが「develop」になっているかを確認！もしなっていなければ、developに書き換える。
+黄色の表示のところに、自分のユーザー名のブランチが表示されている場合、Compare & pull requestを押してください。もし表示されていなければ、New pull requestを押してください。
+どっちを押しても大丈夫です
 
-そしてMERGEのところは
-**feature/{自分のユーザー名}**
-になっているかを確認！
+![GitHub](./readme_pictures/github_pr_1.png)
 
-OKなら、完成した内容を入力して**Createボタン**を押す！
-![Cursor](./readme_pictures/cursor_pr_3.png)
+そしてPR画面では、
 
-## お疲れ様でした！！！！！
-#### あとは管理者が確認して、バグがあれば修正して、サーバーに反映させます！
+```注意
+baseがdevelopになっているかを確認！もしなっていなければ、developを選択する。
+```
 
-完了次第、あなたのブランチは消します！
-また新しく担当する場合は、ブランチの作成から始めてください！
+そして、
 
+```注意
+compareが自分のユーザー名のブランチが表示されているかを確認！もしなっていなければ、自分のユーザー名のブランチを選択する。
+```
 
-# Cursorでの開発（まとめ）
+そして、descriptionに開発した内容や、解決できなかったバグなども簡単に入力。
+
+その後、緑の「**Create pull request**」ボタンを押してください。
+
+![GitHub](./readme_pictures/github_pr_2.png)
+
+以上です！
+PRを出したらディスコサーバーで「PR出した」と一声欲しいです！
+
+# Cursorでの開発(まとめ)
 
 ## 初期セットアップ（最初の1回だけ）
 
@@ -190,13 +198,17 @@ OKなら、完成した内容を入力して**Createボタン**を押す！
 ## 開発フェーズで毎回行う作業
 
 - 最新データを反映
-``` 
+
+```コマンド
 git pull
-``` 
-- 作業用ブランチの作成
 ```
+
+- 作業用ブランチの作成
+
+```コマンド
 git checkout -b feature/{ユーザー名}
 ```
+
 - コード編集・開発
 - コミット & プッシュ（適宜）
 - 担当機能完成後にPull Requestの作成
